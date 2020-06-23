@@ -1,0 +1,21 @@
+<div id="container">
+  <mat-card *ngFor="let news of newsList">
+    <mat-card-header>
+      <mat-card-title>{{news.title}}</mat-card-title>
+      <mat-card-subtitle>{{news.publishedAt}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{news.urlImage}}" alt="Photo of {{news.title}}" >
+    <mat-card-content>
+      <p>
+        {{news.description}}
+      </p>
+      <p>
+        <button routerLink="/edit" class="mat-raised-button">Edit</button><button mat-raised-button>Accept</button>
+      </p>
+      <p>
+        {{news.url}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
